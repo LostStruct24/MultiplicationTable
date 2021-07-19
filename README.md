@@ -1,3 +1,3 @@
 # Multiplication Table
 
-Multiplication App made with ReactJS# MultiplicationTable
+Multiplication App made with ReactJS

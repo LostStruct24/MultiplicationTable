@@ -36,12 +36,7 @@ class MultiplicationTable extends Component {
         this.setState({ productInt: initNums[2] });
     }
 
-    render () {
-        //console.log('State:', this.state);
-        // console.log(randomNumber1);
-        // console.log(randomNumber2);
-        // console.log(multiply);    
-        
+    render () {        
         return (
             <div className="MultiplicationTable">
                 <div className='wrapper'>
