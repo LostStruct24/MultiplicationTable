@@ -37,7 +37,7 @@ class MultiplicationTable extends Component {
     }
 
     render () {
-        console.log('State:', this.state);
+        //console.log('State:', this.state);
         // console.log(randomNumber1);
         // console.log(randomNumber2);
         // console.log(multiply);    
