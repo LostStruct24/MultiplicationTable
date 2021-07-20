@@ -1,5 +1,5 @@
 .Navbar {
-    background-color: rgb(162, 193, 202);
+    background-color: #2A4849;
     height: 80px;
     display: flex;
     justify-content: center;
@@ -10,6 +10,14 @@
 }
 
 .NavbarTitle {
-    color: rgb(33, 33, 53);
+    color: #DBE5C7;
     cursor: pointer;
+    text-transform: uppercase;
+    letter-spacing: 2px;
+}
+
+@media screen and (min-width:300px) and (max-width:768px) {
+    .NavbarTitle {
+        font-size: 20px;
+    }
 }

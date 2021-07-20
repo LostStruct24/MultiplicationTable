@@ -7,7 +7,7 @@ import Particles from 'react-particles-js';
 const particlesOptions = {
   particles: {
     line_linked: {
-      color: "rgb(33, 33, 53)"
+      color: "#8BB174"
     },
     number: {
       value: 15,

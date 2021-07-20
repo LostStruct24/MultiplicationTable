@@ -1,9 +1,6 @@
 import React, { Component } from 'react';
 import './MultiplicationTable.css';
-import { randomNumber } from '../RandomNumbers/RandomNumbers';
-
-
-const initNums = randomNumber();
+import { randomNumber, initNums } from '../RandomNumbers/RandomNumbers';
 
 class MultiplicationTable extends Component {
     state = {
@@ -14,15 +11,14 @@ class MultiplicationTable extends Component {
     };
 
     getinputValue = (event) => {
-        console.log('Event:', event.target.value);
         this.setState({ value: event.target.value });
     }
+
    
     onButtonClick = (event) => {
         event.preventDefault();
         const inputValue = this.state.value;
         const productInt = this.state.productInt;
-        console.log('inputValue on button click:', inputValue);
 
         if (Math.round(inputValue) === Math.round(productInt)) {
             window.alert('Correct answer');
@@ -53,7 +49,7 @@ class MultiplicationTable extends Component {
                         <h4>=</h4>
                     </div>
                     <input className='answer' type='number' onChange={this.getinputValue}></input>
-                    <button className='btn'  onClick={this.onButtonClick}>✓</button>
+                    <button className='btn' onClick={this.onButtonClick}>✓</button>
                 </div>
             </div>
         );
