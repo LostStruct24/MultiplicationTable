@@ -4,7 +4,7 @@
 
 .wrapper {
     width: 500px;
-    padding: 80px 40px;
+    padding: 90px 40px;
     background-color: #DBE5C7;
     position: absolute;
     transform: translate(-50%,-50%);
@@ -17,9 +17,19 @@
     z-index: 2;
 }
 
+.timer {
+    position: absolute;
+    bottom: 75%;
+    font-size: 20px;
+    color: #222E50;
+}
+
 .container {
     width: 20px;
     height: 40px;
+    font-size: 35px;
+    color: #222E50;
+
 }
 
 .container h4 {

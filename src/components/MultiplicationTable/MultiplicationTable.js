@@ -1,6 +1,7 @@
 import React, { Component } from 'react';
 import './MultiplicationTable.css';
 import { randomNumber, initNums } from '../RandomNumbers/RandomNumbers';
+import Timer from '../CountdownTimer/Timer';
 
 class MultiplicationTable extends Component {
     state = {
@@ -10,11 +11,12 @@ class MultiplicationTable extends Component {
         productInt: initNums[2]
     };
 
+    hoursMinSecs = {hours:0, minutes: 10, seconds: 0};
+
     getinputValue = (event) => {
         this.setState({ value: event.target.value });
     }
 
-   
     onButtonClick = (event) => {
         event.preventDefault();
         const inputValue = this.state.value;
@@ -36,6 +38,9 @@ class MultiplicationTable extends Component {
         return (
             <div className="MultiplicationTable">
                 <div className='wrapper'>
+                    <div className='timer'>
+                        <Timer hoursMinSecs={this.hoursMinSecs}/>
+                    </div>
                     <div className='container'>
                         <h4>{this.state.multipInt1}</h4>
                     </div>
