@@ -1,40 +1,46 @@
-import React from 'react';
+import React, { Component } from 'react';
 
-const Timer = ({hoursMinSecs}) => {
-   
-    const { hours = 0, minutes = 0, seconds = 60 } = hoursMinSecs;
-    const [[hrs, mins, secs], setTime] = React.useState([hours, minutes, seconds]);
+class Timer extends Component {
+    state = {
+        minutes: 10,
+        seconds: 0
+    }
+
+    componentDidMount() {
+        this.myInterval = setInterval(() => {
+          const { seconds, minutes } = this.state    
+          if (seconds > 0) {
+            this.setState(({ seconds }) => ({
+              seconds: seconds - 1
+            }))
+          }    if (seconds === 0) {
+            if (minutes === 0) {
+              clearInterval(this.myInterval)
+            } else {
+              this.setState(({ minutes }) => ({
+                minutes: minutes - 1,
+                seconds: 59
+              }))
+            }
+          }
+        }, 1000)
+    }
     
+    componentWillUnmount() {
+        clearInterval(this.myInterval)
+    }
 
-    const tick = () => {
-        if (hrs === 0 && mins === 0 && secs === 0) 
-            reset();
-        else if (mins === 0 && secs === 0) {
-            setTime([hrs - 1, 59, 59]);
-        } else if (secs === 0) {
-            setTime([hrs, mins - 1, 59]);
-        } else {
-            setTime([hrs, mins, secs - 1]);
-        }
-    };
-
-
-    const reset = () => setTime([parseInt(hours), parseInt(minutes), parseInt(seconds)]);
-
-    
-    React.useEffect(() => {
-        const timerId = setInterval(() => tick(), 1000);
-        return () => clearInterval(timerId);
-    });
-
-    
-    return (
-        <div>
-            <p>{`${hrs.toString().padStart(2, '0')}:${mins
-            .toString()
-            .padStart(2, '0')}:${secs.toString().padStart(2, '0')}`}</p> 
-        </div>
-    );
+    render() {
+    const { minutes, seconds } = this.state
+        return (
+            <div>
+                { minutes === 0 && seconds === 0
+                    ? <>Time's up!</>
+                    : <>Time Remaining: {minutes}:{seconds < 10 ? `0${seconds}` : seconds}</>
+                }
+            </div>
+        )
+    }
 }
 
 export default Timer;

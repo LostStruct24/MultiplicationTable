@@ -8,13 +8,14 @@ class MultiplicationTable extends Component {
         value: '',
         multipInt1: initNums[0],
         multipInt2: initNums[1],
-        productInt: initNums[2]
+        productInt: initNums[2],
+        rightAnswers: 0,
+        wrongAnswers: 0
     };
-
-    hoursMinSecs = {hours:0, minutes: 10, seconds: 0};
 
     getinputValue = (event) => {
         this.setState({ value: event.target.value });
+
     }
 
     onButtonClick = (event) => {
@@ -22,10 +23,18 @@ class MultiplicationTable extends Component {
         const inputValue = this.state.value;
         const productInt = this.state.productInt;
 
+        const rightAnswers = this.state.rightAnswers;
+        const wrongAnswers = this.state.wrongAnswers;
+
+
         if (Math.round(inputValue) === Math.round(productInt)) {
-            window.alert('Correct answer');
+            this.setState({ rightAnswers: rightAnswers + 1});
+            window.alert('Correct Answer!');
+            //console.log('correct:', rightAnswers);
         } else {
-            window.alert('Wrong answer');
+            this.setState({ wrongAnswers: wrongAnswers + 1 });
+            window.alert('Wrong Answer!');
+            //console.log('wrong:', wrongAnswers);
         }
 
         const initNums = randomNumber();
@@ -34,12 +43,17 @@ class MultiplicationTable extends Component {
         this.setState({ productInt: initNums[2] });
     }
 
+    handleSubmit(event){ 
+        event.preventDefault();
+        this.setState({ value: '' });
+    }
+
     render () {        
         return (
             <div className="MultiplicationTable">
                 <div className='wrapper'>
                     <div className='timer'>
-                        <Timer hoursMinSecs={this.hoursMinSecs}/>
+                        <Timer />
                     </div>
                     <div className='container'>
                         <h4>{this.state.multipInt1}</h4>
@@ -53,8 +67,8 @@ class MultiplicationTable extends Component {
                     <div className='container'>
                         <h4>=</h4>
                     </div>
-                    <input className='answer' type='number' onChange={this.getinputValue}></input>
-                    <button className='btn' onClick={this.onButtonClick}>✓</button>
+                    <input className='answer' type="number" onChange={this.getinputValue}></input>
+                    <button className='btn' type='submit' onClick={this.onButtonClick}>✓</button>
                 </div>
             </div>
         );
