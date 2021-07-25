@@ -1,20 +1,20 @@
 {
   "files": {
-    "main.css": "/MultiplicationTable/static/css/main.27e1c9b5.chunk.css",
-    "main.js": "/MultiplicationTable/static/js/main.777c7aed.chunk.js",
-    "main.js.map": "/MultiplicationTable/static/js/main.777c7aed.chunk.js.map",
+    "main.css": "/MultiplicationTable/static/css/main.ec65d649.chunk.css",
+    "main.js": "/MultiplicationTable/static/js/main.f59358b1.chunk.js",
+    "main.js.map": "/MultiplicationTable/static/js/main.f59358b1.chunk.js.map",
     "runtime-main.js": "/MultiplicationTable/static/js/runtime-main.961d41e8.js",
     "runtime-main.js.map": "/MultiplicationTable/static/js/runtime-main.961d41e8.js.map",
     "static/js/2.c3548311.chunk.js": "/MultiplicationTable/static/js/2.c3548311.chunk.js",
     "static/js/2.c3548311.chunk.js.map": "/MultiplicationTable/static/js/2.c3548311.chunk.js.map",
     "index.html": "/MultiplicationTable/index.html",
-    "static/css/main.27e1c9b5.chunk.css.map": "/MultiplicationTable/static/css/main.27e1c9b5.chunk.css.map",
+    "static/css/main.ec65d649.chunk.css.map": "/MultiplicationTable/static/css/main.ec65d649.chunk.css.map",
     "static/js/2.c3548311.chunk.js.LICENSE.txt": "/MultiplicationTable/static/js/2.c3548311.chunk.js.LICENSE.txt"
   },
   "entrypoints": [
     "static/js/runtime-main.961d41e8.js",
     "static/js/2.c3548311.chunk.js",
-    "static/css/main.27e1c9b5.chunk.css",
-    "static/js/main.777c7aed.chunk.js"
+    "static/css/main.ec65d649.chunk.css",
+    "static/js/main.f59358b1.chunk.js"
   ]
 }
