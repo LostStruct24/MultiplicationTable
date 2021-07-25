@@ -39,11 +39,6 @@ class MultiplicationTable extends Component {
         this.setState({ productInt: initNums[2] });
     }
 
-    handleSubmit(event){ 
-        event.preventDefault();
-        this.setState({ value: '' });
-    }
-
     render () {        
         return (
             <div className="MultiplicationTable">
