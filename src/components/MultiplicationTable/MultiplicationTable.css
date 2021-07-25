@@ -4,6 +4,7 @@
 
 .wrapper {
     width: 500px;
+    height: 100px;
     padding: 90px 40px;
     background-color: #DBE5C7;
     position: absolute;
@@ -19,8 +20,16 @@
 
 .timer {
     position: absolute;
-    bottom: 75%;
-    font-size: 20px;
+    bottom: 80%;
+    font-size: 23px;
+    color: #202c4d;
+}
+
+.answers {
+    position: absolute;
+    bottom: 78%;
+    left: 68%;
+    font-size: 17px;
     color: #222E50;
 }
 
@@ -29,7 +38,7 @@
     height: 40px;
     font-size: 35px;
     color: #222E50;
-
+    margin-top: 10%;
 }
 
 .container h4 {
@@ -40,12 +49,15 @@
 .answer {
     border-radius: 10px;
     width: 80px;
-    height: 100%;
+    height: 50px;
     font-size: 35px;
+    margin-top: 9%;
     color: rgb(16, 27, 32);
 }
 
 .btn {
+    height: 50px;
+    margin-top: 9%;
     font-size: 20px;
     position: relative;
     cursor: pointer;
@@ -56,23 +68,41 @@
     display: inline-block;
 }
 
-@media screen and (min-width:300px) and (max-width:768px) {
+@media screen and (min-width:300px) and (max-width:750px) {
     .wrapper {
         width: 250px;
+    }
+
+    .container {
+        margin-top: 25%;
     }
     
     .container h4 {
         font-size: 25px;
     }
 
+    .timer {
+        font-size: 20px;
+    }
+
+    .answers {
+        left: 13%;
+        top: 25%;
+        font-size: 14px;
+    }
+
     .answer {
         width: 50px;
         height: 40px;
         font-size: 25px;
+        margin-top: 23%;
+
     } 
 
     .btn {
+        height: 43px;
         padding: 5px 10px;
+        margin-top: 22%;
     }
     
 }

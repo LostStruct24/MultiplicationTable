@@ -29,12 +29,8 @@ class MultiplicationTable extends Component {
 
         if (Math.round(inputValue) === Math.round(productInt)) {
             this.setState({ rightAnswers: rightAnswers + 1});
-            window.alert('Correct Answer!');
-            //console.log('correct:', rightAnswers);
         } else {
             this.setState({ wrongAnswers: wrongAnswers + 1 });
-            window.alert('Wrong Answer!');
-            //console.log('wrong:', wrongAnswers);
         }
 
         const initNums = randomNumber();
@@ -54,6 +50,10 @@ class MultiplicationTable extends Component {
                 <div className='wrapper'>
                     <div className='timer'>
                         <Timer />
+                    </div>
+                    <div className='answers'>
+                        <div>Right Answers:{this.state.rightAnswers}</div>
+                        <div>Wrong Answers:{this.state.wrongAnswers}</div>
                     </div>
                     <div className='container'>
                         <h4>{this.state.multipInt1}</h4>
