@@ -28,7 +28,7 @@
 .answers {
     position: absolute;
     bottom: 78%;
-    left: 68%;
+    left: 67%;
     font-size: 17px;
     color: #222E50;
 }
@@ -86,7 +86,7 @@
     }
 
     .answers {
-        left: 13%;
+        left: 12%;
         top: 25%;
         font-size: 14px;
     }

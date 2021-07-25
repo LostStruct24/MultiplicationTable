@@ -2,7 +2,7 @@ import React, { Component } from 'react';
 
 class Timer extends Component {
   state = {
-    minutes: 10,
+    minutes: 2,
     seconds: 0
   }
 
